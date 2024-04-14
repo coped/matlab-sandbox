@@ -60,12 +60,12 @@ You can think of the difference like this:
 
 Think of your functions as giant machines in a factory. To pass values/arguments to your machines, you enter them through a little coin slot on the machine. 
 
-Values and expressions like `2`, `"hello"`, and `3 + 3` can fit just fine. But other big machines (functions) can't fit through the coin slot at all. As a workaround, we write *directions* to the other machines on a piece of paper, and put them in the slot, which fits just fine. Now the machine knows where to go in order to do the work.
+Values and expressions like `2`, `"hello"`, and `3 + 3` can fit just fine. But other big machines (functions) can't fit through the coin slot at all. As a workaround, we write *directions* to the other machines on a piece of paper (a function handle), and put them in the slot, which fits just fine. Now the machine knows where to go in order to do the work.
 
 ## 2. Function generalization
 
 If a specific function is commonly used
-throughout your logic, referencing it using a handler can
+throughout your logic, referencing it using a handle can
 make it easier to maintain your code if you need to swap it 
 for another function sometime in the future.
 
@@ -129,3 +129,7 @@ c = get_value(2);
 d = get_value(3);
 f = get_value(4);
 ```
+
+Note: Doing this isn't strictly necessary to make your code work. This just seems like a code preference some programmers choose to adopt. It's up to you if/when you want to use this pattern in your own programs. 
+
+My personal take is to use it when you think you *need* it, which may not be that often in simple programs.
